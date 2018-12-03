@@ -1,8 +1,37 @@
 package com.company;
 
+import java.util.*;
 public class Main {
 
     public static void main(String[] args) {
-for (int i=0; i<100; i++;) 
+
+        int count=0; int timesRunning=0;
+
+
+        System tem = null;
+        tem.out.println("Enter the amount you want to run it: Only integers, and don't put a number too big");
+        Scanner kbinput = new Scanner(System.in);
+        int control = kbinput.nextInt();
+        for (int i=0; i<=control; i++){
+            timesRunning++;
+            boolean array[]= new boolean[100];
+            boolean yes;
+            while(true){
+                Random rndm = new Random();
+                int x = rndm.nextInt(100);
+                array[x]=true;
+                count++;
+                yes=true;
+                for(int k=0; k<100; k++){
+                    if(array[k]==false)
+                        yes=false;
+                }
+                if(yes==true){
+                    break;
+                }
+            }
+        }
+        int avg = count/timesRunning;
+        System.out.println(avg);
     }
 }
